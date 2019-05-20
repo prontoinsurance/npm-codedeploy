@@ -5,10 +5,10 @@
 if [ "$PROJECT" != "" ] 
 then
     rm -rf /var/www/$PROJECT
-    mkdir -p /var/www/$PROJECT
-    cp -r $BUILDDIRECTORY/* /var/www/$PROJECT
-    cp $CODEDEPLOY/.htaccess /var/www/$PROJECT
-    chown -R apache:apache /var/www/$PROJECT
+    mkdir -p /var/www/$PROJECT/tx/insurance/
+    cp -r $BUILDDIRECTORY/* /var/www/$PROJECT/tx/insurance/
+    cp $CODEDEPLOY/.htaccess /var/www/$PROJECT/tx/insurance/
+    chown -R apache:apache /var/www/$PROJECT/tx/insurance/
 else 
     rm -rf html/*
     cp -r $BUILDDIRECTORY/* /var/www/html
